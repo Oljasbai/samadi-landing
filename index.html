@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="САМАДИ - ведущий дистрибьютор в Казахстане. 30 лет опыта, 500 сотрудников, 150 000 заказов в год.">
+    <title>САМАДИ - Группа Компаний | Лидер дистрибуции в Казахстане</title>
+    
+    <!-- Preconnect for faster external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Critical CSS - inline for instant render -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #343A40; overflow-x: hidden; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+    </style>
+    
+    <!-- Main Stylesheet - Multiple fallbacks -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!-- Fallback: If CSS doesn't load, try from root -->
+    <script>
+        // Check if CSS loaded
+        setTimeout(function() {
+            var testElement = document.createElement('div');
+            testElement.className = 'navbar';
+            document.body.appendChild(testElement);
+            var computedStyle = window.getComputedStyle(testElement);
+            
+            if (computedStyle.position !== 'fixed') {
+                // CSS didn't load, show error message
+                document.body.innerHTML = '<div style="padding: 40px; font-family: Arial; max-width: 800px; margin: 50px auto; border: 3px solid #DC3545; border-radius: 10px; background: #FFF3CD;"><h1 style="color: #DC3545;">⚠️ Ошибка загрузки стилей</h1><p><strong>Сайт не может загрузить CSS файлы.</strong></p><p><strong>Решение:</strong></p><ol><li><strong>Скачайте проект</strong> и откройте через локальный веб-сервер:<br><code>python -m http.server 8000</code></li><li><strong>Опубликуйте на Netlify:</strong> <a href="https://netlify.com" target="_blank">netlify.com</a></li><li>Откройте файл <strong>РЕШЕНИЕ-ПРОБЛЕМЫ.md</strong> для подробных инструкций</li></ol><p style="margin-top: 20px; padding: 15px; background: #D1ECF1; border-left: 4px solid #0C5460; color: #0C5460;"><strong>💡 Совет:</strong> На платформе Genspark могут не работать относительные пути. Используйте Netlify для публикации!</p></div>';
+            }
+            document.body.removeChild(testElement);
+        }, 1000);
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">САМАДИ</h1>
+                <span class="since">Since 1995</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link">Главная</a>
+                <a href="#about" class="nav-link">О компании</a>
+                <a href="#stats" class="nav-link">Показатели</a>
+                <a href="#geography" class="nav-link">География</a>
+                <a href="#competencies" class="nav-link">Компетенции</a>
+                <a href="#partners" class="nav-link">Партнеры</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title animate-fade-in">
+                        <span class="gradient-text">САМАДИ</span>
+                    </h1>
+                    <h2 class="hero-subtitle animate-fade-in-delay-1">Группа Компаний</h2>
+                    <p class="hero-description animate-fade-in-delay-2">
+                        Ведущий дистрибьютор мировых и отечественных брендов в Казахстане
+                    </p>
+                    <div class="hero-stats animate-fade-in-delay-3">
+                        <div class="hero-stat">
+                            <span class="stat-number">30</span>
+                            <span class="stat-label">лет на рынке</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">500</span>
+                            <span class="stat-label">сотрудников</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-number">150К</span>
+                            <span class="stat-label">заказов в год</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons animate-fade-in-delay-4">
+                        <a href="#about" class="btn btn-primary">Узнать больше</a>
+                        <a href="#contact" class="btn btn-outline">Связаться с нами</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">О нас</span>
+                <h2 class="section-title">Надежный партнер вашего бизнеса</h2>
+                <p class="section-subtitle">
+                    С 1995 года мы предоставляем профессиональные дистрибьюторские и логистические услуги
+                </p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Лидер рынка</h3>
+                    <p>Самый большой портфель мировых и отечественных брендов в Карагандинской и Улытауской областях</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Долгосрочное партнерство</h3>
+                    <p>Средний срок сотрудничества с партнерами - 12 лет. Надежность, проверенная временем</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Современная инфраструктура</h3>
+                    <p>30 500 кв.м складских помещений для безопасного хранения товаров любой категории</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats section-dark" id="stats">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag light">Наши достижения</span>
+                <h2 class="section-title light">Ключевые показатели</h2>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="30">0</h3>
+                        <p class="stat-label">Лет опыта на рынке</p>
+                        <span class="stat-tag">Основана в 1995 году</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="500">0</h3>
+                        <p class="stat-label">Профессиональных сотрудников</p>
+                        <span class="stat-tag">Квалифицированная команда</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="150000">0</h3>
+                        <p class="stat-label">Заказов обрабатывается в год</p>
+                        <span class="stat-tag">Высокая производительность</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="30500">0</h3>
+                        <p class="stat-label">Кв.м складских помещений</p>
+                        <span class="stat-tag">Современная инфраструктура</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="12">0</h3>
+                        <p class="stat-label">Лет средний срок партнерства</p>
+                        <span class="stat-tag">Долгосрочные отношения</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number" data-target="98">0</h3>
+                        <p class="stat-label">% охват рынка Жезказгана</p>
+                        <span class="stat-tag">535 активных клиентов</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geography Section -->
+    <section class="geography section" id="geography">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Где мы работаем</span>
+                <h2 class="section-title">География присутствия</h2>
+                <p class="section-subtitle">
+                    Широкая сеть охвата ключевых регионов Казахстана
+                </p>
+            </div>
+            <div class="geography-grid">
+                <div class="geography-card">
+                    <div class="geography-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Караганда</h3>
+                    <div class="geography-stats">
+                        <div class="geo-stat">
+                            <span class="geo-number">2,800</span>
+                            <span class="geo-label">торговых точек</span>
+                        </div>
+                        <div class="geo-stat">
+                            <span class="geo-number">90%</span>
+                            <span class="geo-label">охват рынка BC</span>
+                        </div>
+                    </div>
+                    <p class="geography-desc">2,500 активных клиентов</p>
+                </div>
+                <div class="geography-card featured">
+                    <div class="geography-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Жезказган</h3>
+                    <div class="geography-stats">
+                        <div class="geo-stat">
+                            <span class="geo-number">550</span>
+                            <span class="geo-label">торговых точек</span>
+                        </div>
+                        <div class="geo-stat">
+                            <span class="geo-number">98%</span>
+                            <span class="geo-label">охват рынка</span>
+                        </div>
+                    </div>
+                    <p class="geography-desc">535 активных клиентов</p>
+                    <div class="featured-badge">Лидирующая позиция</div>
+                </div>
+                <div class="geography-card">
+                    <div class="geography-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Сатпаев</h3>
+                    <p class="geography-desc">Активное региональное присутствие с отработанной логистикой</p>
+                </div>
+                <div class="geography-card">
+                    <div class="geography-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Астана</h3>
+                    <p class="geography-desc">Стратегический хаб для развития бизнеса в столичном регионе</p>
+                </div>
+            </div>
+            <div class="expansion-note">
+                <i class="fas fa-rocket"></i>
+                <p>Опыт успешной экспансии в новые регионы. Готовы к масштабированию бизнеса</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies Section -->
+    <section class="competencies section-dark" id="competencies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag light">Наши возможности</span>
+                <h2 class="section-title light">Компетенции и услуги</h2>
+            </div>
+            <div class="competencies-grid">
+                <div class="competency-card">
+                    <div class="competency-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=NOsat%2F9dfu8ujFHCvtPpxoCynNN%2F1anqclhbVos%2B9ZtbE0dY%2FEXJXXY3CWQQW6ERlEKQ2Ep%2Fjx4gGGhE2HAone1boUrA0Y4jUVzn5IyNH5XpVkQmyUBlTBXVISZNzdr%2Fh4%2FXjr%2FchWwWKaVO&u2=I98DXf4L5mApM94r&width=2560" alt="Дистрибуция и логистика">
+                    </div>
+                    <div class="competency-content">
+                        <div class="competency-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Дистрибуция и логистика</h3>
+                        <ul class="competency-list">
+                            <li><i class="fas fa-check"></i> Полный цикл дистрибуции товаров</li>
+                            <li><i class="fas fa-check"></i> 30,500 кв.м складских площадей</li>
+                            <li><i class="fas fa-check"></i> Современное складское оборудование</li>
+                            <li><i class="fas fa-check"></i> Оптимизированная логистика</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=w%2FjiIxi8N2Q0u8q73DTKfAoQS0pTephX81cmc4hDPllRrBSvops%2B8LPKNi4fIe5nMDetF7OCM%2BuKaX94u3oKuaSiou1fqIbARgPPkgsxlZipswGf6YsFqoamkdiWBcZGyUeZdXU06lJBEqqmuy8oPn2YZMKMd1I%3D&u2=SALqo3VcRplOAXq2&width=2560" alt="Оптовая торговля FMCG">
+                    </div>
+                    <div class="competency-content">
+                        <div class="competency-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <h3>Оптовая торговля FMCG</h3>
+                        <ul class="competency-list">
+                            <li><i class="fas fa-check"></i> Крупнейший портфель брендов в регионе</li>
+                            <li><i class="fas fa-check"></i> 150,000 заказов обрабатывается ежегодно</li>
+                            <li><i class="fas fa-check"></i> Работа с мировыми и местными брендами</li>
+                            <li><i class="fas fa-check"></i> Гибкие условия сотрудничества</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=uEUmJ2TcLxgMKVB58NdS%2BIJWysRysvvm2FEGFUpg3e3IJN%2FgYo86IVKS23%2B0q119RbMqHVWY0R9JkpcJrEXXm%2Fs1yWsYu2xF%2BAvx7VS%2B7t3BLtsvoQ3krcgHZCmzqQHQ&u2=TekDf0NEHjQ6LtH8&width=2560" alt="Овощехранилище">
+                    </div>
+                    <div class="competency-content">
+                        <div class="competency-icon">
+                            <i class="fas fa-snowflake"></i>
+                        </div>
+                        <h3>Температурные режимы хранения</h3>
+                        <ul class="competency-list">
+                            <li><i class="fas fa-check"></i> Безопасное хранение товаров любой категории</li>
+                            <li><i class="fas fa-check"></i> Современное холодильное оборудование</li>
+                            <li><i class="fas fa-check"></i> Соблюдение всех норм и стандартов</li>
+                            <li><i class="fas fa-check"></i> Контроль качества на всех этапах</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="competency-card">
+                    <div class="competency-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=21thtUWMMhmTtkDoAZtEtQynwLNV5kD0Jtm3nyHXJX7BJn149a20fvDc8d6Jk0TuJF2tiLxEzyBqvcE2IIN9l7hbLBJ4fqXJ1saS8K7ThooDiA%3D%3D&u2=cs08achxaX9yU0xu&width=2560" alt="Профессиональная команда">
+                    </div>
+                    <div class="competency-content">
+                        <div class="competency-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Профессиональная команда</h3>
+                        <ul class="competency-list">
+                            <li><i class="fas fa-check"></i> 500 квалифицированных специалистов</li>
+                            <li><i class="fas fa-check"></i> Опыт работы с крупными партнерами</li>
+                            <li><i class="fas fa-check"></i> Индивидуальный подход к каждому клиенту</li>
+                            <li><i class="fas fa-check"></i> Постоянное обучение персонала</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vertical Integration Section -->
+    <section class="integration section" id="integration">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Комплексный подход</span>
+                <h2 class="section-title">Вертикальная интеграция бизнеса</h2>
+                <p class="section-subtitle">
+                    Полный производственный цикл - от производства до розничной продажи
+                </p>
+            </div>
+            <div class="integration-grid">
+                <div class="integration-card">
+                    <div class="integration-number">01</div>
+                    <div class="integration-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Производство</h3>
+                    <p>Собственная мельница мощностью 50 тонн в день и кондитерский цех</p>
+                </div>
+                <div class="integration-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-number">02</div>
+                    <div class="integration-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Хранение</h3>
+                    <p>30,500 кв.м современных складских помещений с контролем температуры</p>
+                </div>
+                <div class="integration-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-number">03</div>
+                    <div class="integration-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Логистика</h3>
+                    <p>Оптимизированная система доставки по регионам Казахстана</p>
+                </div>
+                <div class="integration-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-number">04</div>
+                    <div class="integration-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Дистрибуция</h3>
+                    <p>Обработка 150,000 заказов в год с охватом 98% рынка</p>
+                </div>
+                <div class="integration-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <div class="integration-card">
+                    <div class="integration-number">05</div>
+                    <div class="integration-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Розница</h3>
+                    <p>Сеть супермаркетов и гипермаркет площадью 4,000 кв.м</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners section-dark" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag light">Доверие профессионалов</span>
+                <h2 class="section-title light">Нам доверяют</h2>
+                <p class="section-subtitle light">
+                    Ведущие мировые и отечественные бренды выбирают САМАДИ
+                </p>
+            </div>
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=tzanQ9euUVbkaOrR83gKo0VrOO%2FZTpdABKaV7IATWMtDenfZuRLsM%2FpW6%2FBmdUxhsK9RjFbQTZ0e3gfui%2FnfqoCa0gAWfwHPiQ74v7WVHHSWHX4%3D&u2=CVB%2BWSRRbwb3p3Q3&width=2560" alt="Сахарный Центр">
+                    </div>
+                    <h3>Сахарный Центр</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=KLh%2BC0lASoNPKqpp3%2FCG0i00AI2FHxKLSRJOh5Mhx02R5t%2BDaEXc%2FB5IACWjAA3AjFts6GYt&u2=HPKIi0i1G8Xy0rFj&width=2560" alt="Raimbek Bottlers">
+                    </div>
+                    <h3>Raimbek Bottlers</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=eK4cH5aVq6BGq3LA8sF64HIhfHHY%2BQTrWkcQUI3Dlzt63%2BQS%2FlXPWyVO51o2tlH6mHIKvZ%2BSmm8fwvekHi43OIX2CXmwzPjuO4jUhbl9quiNHH%2FsBjLDmKGFYg%3D%3D&u2=fiuySP4wjQdEn8%2Bd&width=2560" alt="Кублей">
+                    </div>
+                    <h3>Кублей</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=FuFbQ9ueHQZ2ihJKoXGpoPFZhX7JslHMLIVOxALk2MecRNB%2B%2BB4Jtng1bYyHpqTG2MeQ6JQYTsgvBbugs4gPwl25RBf55ULzEI7LRE8vMZVL3eP618nK8AqTWO7p&u2=a0WHyoCnRBOWiKRR&width=2560" alt="Кокшетауские минводы">
+                    </div>
+                    <h3>Кокшетауские минводы</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=jWppTtp8MKos32KNNUN8bfp8uJv2nQ1iIbougZL4utYAaAGTUE9ULy6DAcO%2BX3vUrOcMpH8E%2Bch%2Bo3BYkXGamBZpSSgkuiAlhrl1zOQ9b73%2FeJbJrntgDjuqEjRfkRTbhxKd9xXDUFY%3D&u2=il4tzhygoe1r6wqY&width=2560" alt="Gorilla Energy">
+                    </div>
+                    <h3>Люксарт (Gorilla)</h3>
+                </div>
+                <div class="partner-card">
+                    <div class="partner-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=R8%2BxrD6JpTCUI0U17qV4DB8OWKDESD2qjitWryxCMEcZKPLVNLc5cIRnp12XG6tAaRHQm99dBj5g9RbmTMa6edA8C%2BSKTsEupaXUhcp6&u2=CICw1JwMPA4CAZkb&width=2560" alt="RIKS">
+                    </div>
+                    <h3>RIKS</h3>
+                </div>
+            </div>
+            <div class="partners-note">
+                <p>И многие другие ведущие компании</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Свяжитесь с нами</span>
+                <h2 class="section-title">Начните сотрудничество</h2>
+                <p class="section-subtitle">
+                    Готовы обсудить возможности партнерства
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Главный офис</h4>
+                            <p>Караганда, ул. Молокова, 114</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Телефон</h4>
+                            <p>+7 (XXX) XXX-XX-XX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@samadi.kz</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Время работы</h4>
+                            <p>Пн-Пт: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-input" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" rows="5" placeholder="Ваше сообщение" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Отправить сообщение
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="footer-logo">САМАДИ</h3>
+                    <p class="footer-tagline">Since 1995</p>
+                    <p class="footer-description">
+                        Ведущий дистрибьютор мировых и отечественных брендов в Казахстане
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Быстрые ссылки</h4>
+                    <ul>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#stats">Показатели</a></li>
+                        <li><a href="#geography">География</a></li>
+                        <li><a href="#competencies">Компетенции</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Караганда, ул. Молокова, 114</li>
+                        <li><i class="fas fa-envelope"></i> info@samadi.kz</li>
+                        <li><i class="fas fa-phone"></i> +7 (XXX) XXX-XX-XX</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Социальные сети</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 САМАДИ. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
