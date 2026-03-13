@@ -1310,3 +1310,57 @@ textarea.form-input {
         padding: 25px;
     }
 }
+
+/* Контейнер для карточек */
+.integration-row {
+    display: grid;
+    /* Создает 5 колонок равной ширины */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 20px;
+    align-items: stretch; /* Растягивает все карточки по высоте самой высокой */
+}
+
+/* Сама карточка */
+.integration-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Гарантирует одинаковую высоту */
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.integration-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Убираем старые стрелки, если они были в CSS, 
+   или добавляем визуальные разделители через псевдоэлементы (по желанию) */
+@media (min-width: 1024px) {
+    .integration-card:not(:last-child)::after {
+        content: '\f105'; /* Иконка стрелочки FontAwesome */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #d4af37; /* Золотой цвет */
+        font-size: 20px;
+        z-index: 1;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 992px) {
+    .integration-row {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .integration-card::after {
+        display: none;
+    }
+}
